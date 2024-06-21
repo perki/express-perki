@@ -1,0 +1,33 @@
+baseURL: https://bob.backloop.dev:5020 # Exposed url no trailing '/'
+
+start:
+  # if numProcesses=0 launch 1 process per CPU
+  # if numProcesses>0 launch exactly numProcess processes
+  # if numProcesses<0 launch max(numCPU + numProcess, 1) process(es)
+  numProcesses: 0 
+
+server:
+  port: 5432
+  host: '0.0.0.0'
+
+  logs: 
+  console: 
+    active: true
+    level: info
+    format: 
+      color: true
+      time: true
+      aligned: true
+  file: 
+    active: true
+    path: application.log
+
+storage:
+  main:
+    # host: 'localhost'
+    engine: 'sqlite' # or 'postgres' 
+    sqliteFilePath: 'storage/app.sqlite' # only for sqlite, relative to package.json direrctory
+    # database: 'dpe'
+    # port: 5432
+    # username: ''
+    # password: ''

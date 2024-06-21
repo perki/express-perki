@@ -1,0 +1,7 @@
+# sample localConfig
+# copied by script/setup.ch
+# 
+# Add custom data here 
+# used whend launched with `npm run start:prod``
+server:
+  host: '127.0.0.1'  # Only allow connection from localhost
